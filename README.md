@@ -1,6 +1,6 @@
 # OV7670-Minimal1
 This arduino code controls the OV7670 camera module with probably least amount of code. It outputs in Serial monitor the pixel data.
-I used Arduino nano. It is best used with Serial Plotter
+I used Arduino nano. It is best used with Serial Plotter. The output is in raw bits so additional conversion may be required.
 
 You will need 1 x 4.7 Kohm and 3 x 10Kohm resistors
 
