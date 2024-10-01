@@ -18,9 +18,13 @@ int r[11];
 
 void setup() {
   Serial.begin(115200); Wire.begin();
-  pinMode(d0, INPUT); pinMode(d1, INPUT);  pinMode(d2, INPUT); pinMode(d3, INPUT);  pinMode(vsync, INPUT);
-  pinMode(d4, INPUT); pinMode(d5, INPUT);  pinMode(d6, INPUT); pinMode(d7, INPUT); pinMode(pckl, INPUT);
-  pinMode(xckl, OUTPUT);
+//  pinMode(d0, INPUT); pinMode(d1, INPUT);  pinMode(d2, INPUT); pinMode(d3, INPUT);  pinMode(vsync, INPUT);
+//  pinMode(d4, INPUT); pinMode(d5, INPUT);  pinMode(d6, INPUT); pinMode(d7, INPUT); pinMode(pckl, INPUT);
+//  pinMode(xckl, OUTPUT);
+  DDRD = B00001010;
+  DDRB = B01000000;
+  DDRC = B00110000;
+  
   TCCR2A = _BV(COM2B1) | _BV(WGM21) | _BV(WGM20); //set timer on pin3
   TCCR2B = _BV(WGM22) | _BV(CS20);
   OCR2A = 1;
